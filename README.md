@@ -34,3 +34,23 @@ Clone this repo in your local and make a new branch with your name, update the r
 ###### You can always reach out to Sairam Bade or Kuldeep on slack in case of any doubt. Good Luck!
 ---------------------------------------------
 #Your readme goes here :)
+
+#### How to Run:
+1. The app is already running at http://shishir-servers.nferx.com:4444. Import the postman collection to see it.
+2. If needs to be run on different machine, change the configuration accordingly in config.py file and then run ```python app.py```
+
+#### Collections Created:
+PROJECTS_COLLECTION - Each document represent one project. 
+Every document consists of project_id, array of associated datasets (only ids), array of associated models(only ids) and last updated time.
+
+DATASETS_COLLECTIONS - Each document represent one dataset.
+Every document consists project details.
+
+MODELS_COLLECTION - Each document represent one model.
+Every document consists model details.
+
+DATASET_MODEL_MAPPING_COLLECTION - Each document represent mapping of associated models with dataset_id.
+Every document consists dataset_id with array of associated models(only ids)
+
+##### APIs Usage:
+Documented in the file app.py.

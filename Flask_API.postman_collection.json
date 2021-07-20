@@ -91,6 +91,28 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Model Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shishir-servers.nferx.com:4444/getModelDetails/Model_2",
+					"protocol": "http",
+					"host": [
+						"shishir-servers",
+						"nferx",
+						"com"
+					],
+					"port": "4444",
+					"path": [
+						"getModelDetails",
+						"Model_2"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
