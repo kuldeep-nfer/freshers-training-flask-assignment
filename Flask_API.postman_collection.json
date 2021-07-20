@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "3cad3988-abb7-4a4c-839e-091f399ec472",
+		"name": "Flask_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shishir-servers.nferx.com:4444/health",
+					"protocol": "http",
+					"host": [
+						"shishir-servers",
+						"nferx",
+						"com"
+					],
+					"port": "4444",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Process Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shishir-servers.nferx.com:4444/process/5fd1e3d98ba062dffa513175",
+					"protocol": "http",
+					"host": [
+						"shishir-servers",
+						"nferx",
+						"com"
+					],
+					"port": "4444",
+					"path": [
+						"process",
+						"5fd1e3d98ba062dffa513175"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dataset Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shishir-servers.nferx.com:4444/getDatasetDetails/5fd1e4218ba062dffa513177",
+					"protocol": "http",
+					"host": [
+						"shishir-servers",
+						"nferx",
+						"com"
+					],
+					"port": "4444",
+					"path": [
+						"getDatasetDetails",
+						"5fd1e4218ba062dffa513177"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Associated Models with Dataset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://shishir-servers.nferx.com:4444/getAssociatedModels/5fd1e6ab8ba062dffa51b159",
+					"protocol": "http",
+					"host": [
+						"shishir-servers",
+						"nferx",
+						"com"
+					],
+					"port": "4444",
+					"path": [
+						"getAssociatedModels",
+						"5fd1e6ab8ba062dffa51b159"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
