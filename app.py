@@ -47,7 +47,9 @@ def health_check():
 
 @app.route('/process/<project_id>')
 def process(project_id):
-	
+	"""
+		API to process project data from logs of project_id
+	"""
 	url = ProjectService.URL.format(project_id)
 	project_data = json.loads(requests.get(url).text)['result']['project']
 
@@ -92,7 +94,9 @@ def process(project_id):
 
 @app.route('/getProjectDetails/<project_id>')
 def get_project_details(project_id):
-	
+	"""
+		API to get project details related to project_id
+	"""
 	project_query = projects_coll.find_one({'_id' : project_id})
 	if not project_query:
 		resp = {
@@ -124,7 +128,9 @@ def get_project_details(project_id):
 
 @app.route('/getDatasetDetails/<dataset_id>')
 def get_dataset_details(dataset_id):
-
+	"""
+		API to get model details for the given dataset_id
+	"""
 	dataset_query = datasets_coll.find_one({'_id' : dataset_id})
 	if not dataset_query:
 		resp = {
@@ -146,7 +152,9 @@ def get_dataset_details(dataset_id):
 
 @app.route('/getModelDetails/<model_name>')
 def get_model_details(model_name):
-
+	"""
+		API to get model details for the given model_name
+	"""
 	model_id = hashlib.md5(model_name.encode()).hexdigest()
 	model_query = models_coll.find_one({'_id' : model_id})
 	if not model_query:
@@ -169,7 +177,9 @@ def get_model_details(model_name):
 	
 @app.route('/getAssociatedModels/<dataset_id>')
 def get_associated_models(dataset_id):
-
+	"""
+		API to get models used with the given dataset_id.
+	"""
 	dataset_query = dataset_model_mapping_coll.find_one({'_id' : dataset_id})
 	if not dataset_query:
 		resp = {
@@ -191,9 +201,6 @@ def get_associated_models(dataset_id):
 	resp = jsonify(resp)
 	resp.status_code = 200
 	return resp
-
-	
-
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=4444, debug = True)
