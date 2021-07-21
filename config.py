@@ -2,7 +2,7 @@ class MongoConstants:
     HOST = 'ovh-mongo-prestaging.nferx.com'
     PORT = 27017
     USER = 'knigam'
-    PASS = 'Xrvg5U4wCAwtkr6j'
+    PASS = ''
     DATABASE = 'Kushagra'
     PROJECTS_COLLECTION = 'projects_collection'
     DATASETS_COLLECTIONS = 'datasets_collection'
